@@ -16,7 +16,8 @@ const ShippingScreen = ({ history }) => {
 
   const dispatch = useDispatch();
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
     history.push("/payment");
   };
@@ -25,7 +26,7 @@ const ShippingScreen = ({ history }) => {
     <FormContainer>
       <CheckoutSteps step1 step2 />
       <h1 className='text-center'>Shipping</h1>
-      <Form className='text-center' onSubmit={submitHandler}>
+      <Form className='text-center' onSubmit={(e) => submitHandler(e)}>
         <Form.Group controlId='address'>
           <Form.Label>Address</Form.Label>
           <Form.Control

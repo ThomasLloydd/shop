@@ -8,6 +8,7 @@ import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { getOrderDetails, payOrder, shipOrder } from "../actions/orderActions";
 import { ORDER_PAY_RESET, ORDER_SHIP_RESET } from "../constants/orderConstants";
+import { CART_RESET } from "../constants/cartConstants";
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -60,6 +61,9 @@ const OrderScreen = ({ match, history }) => {
       if (userInfo._id !== order.user._id && !userInfo.isAdmin) {
         history.push("/");
       }
+    }
+    if (successPay) {
+      dispatch({ type: CART_RESET });
     }
   }, [
     order,
