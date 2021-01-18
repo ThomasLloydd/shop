@@ -40,14 +40,6 @@ const PaymentScreen = ({ history }) => {
               type='radio'
               label='PayPal or Credit Card'
             ></Form.Check>
-            <Form.Check
-              id='Apple Pay'
-              name='paymentMethod'
-              value='Apple Pay'
-              onChange={(e) => setPaymentMethod(e.target.value)}
-              type='radio'
-              label='Apple Pay'
-            ></Form.Check>
           </Col>
         </Form.Group>
 

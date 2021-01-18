@@ -24,7 +24,11 @@ const OrderScreen = ({ match, history }) => {
   const { userInfo } = userLogin;
 
   const orderPay = useSelector((state) => state.orderPay);
-  const { loading: loadingPay, success: successPay } = orderPay;
+  const {
+    loading: loadingPay,
+    success: successPay,
+    error: errorPay,
+  } = orderPay;
 
   const orderShip = useSelector((state) => state.orderShip);
   const { loading: loadingShip, success: successShip } = orderShip;
@@ -189,6 +193,7 @@ const OrderScreen = ({ match, history }) => {
               </ListGroup.Item>
               {!order.isPaid && (
                 <ListGroup.Item>
+                  {errorPay && <Message variant='danger'>{errorPay}</Message>}
                   {loadingPay && <Loader />}
                   {!sdkReady ? (
                     <Loader></Loader>
