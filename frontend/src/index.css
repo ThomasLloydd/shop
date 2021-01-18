@@ -1,13 +1,150 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  min-height: 80vh;
+}
+
+.rounded-search {
+  border-radius: 100px;
+  display: flex;
+}
+
+.displayNone {
+  display: none;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 0 100px 100px 0;
+}
+
+.searchText {
+  border-radius: 100px 0 0 100px;
+}
+
+.orangeText {
+  color: orange;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.cart {
+  width: 300px;
+  margin: 0;
+  padding: 0 10px;
+  height: auto;
+}
+
+.mainContainer {
+  background-color: rgb(250, 250, 250);
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 50px 100px;
+  width: 90%;
+}
+
+.biscuit {
+  position: fixed;
+  bottom: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.322);
+  background-color: white;
+  padding: 20px;
+  right: 20px;
+  margin-right: -500px;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+
+.showBiscuit {
+  margin-right: 0;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  margin: 0 auto;
+  background-color: rgb(67, 141, 67);
+  color: white;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.fa-check {
+  margin: 0 auto;
+}
+
+.cartDrop,
+.shoppingCart {
+  z-index: 10;
+}
+
+.cartNum {
+  position: absolute;
+}
+
+.fa-stack-1x {
+  margin-left: 6px;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item-active {
+  display: flex;
+  text-align: center;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel img {
+  display: block;
+  height: 300px;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 100px;
+}
+
+.carousel h2 {
+  color: black;
+}
+.carousel a {
+  margin: 0 auto;
+}
+
+.center-carousel {
+  margin: 0 auto;
 }
