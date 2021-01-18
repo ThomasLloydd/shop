@@ -2,6 +2,9 @@
   "name": "proshop",
   "version": "1.0.0",
   "description": "shop",
+  "engines": {
+    "node": ">=12"
+},
   "main": "server.js",
   "type": "module",
   "scripts": {
