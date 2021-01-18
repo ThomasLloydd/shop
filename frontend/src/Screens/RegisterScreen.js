@@ -6,6 +6,7 @@ import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { register } from "../actions/userActions";
 import FormContainer from "../Components/FormContainer";
+import Meta from "../Components/Meta";
 
 const RegisterScreen = ({ location, history }) => {
   const [name, setName] = useState("");
@@ -39,6 +40,7 @@ const RegisterScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
+      <Meta title='Proshop | Register'></Meta>
       <h1>Sign In</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}

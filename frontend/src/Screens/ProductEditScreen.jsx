@@ -8,6 +8,7 @@ import Loader from "../Components/Loader";
 import { listProductDetails, updateProduct } from "../actions/productActions";
 import FormContainer from "../Components/FormContainer";
 import { PRODUCT_UPDATE_RESET } from "../constants/productConstants";
+import Meta from "../Components/Meta";
 
 const ProductEditScreen = ({ match, history }) => {
   const [name, setName] = useState("");
@@ -89,6 +90,7 @@ const ProductEditScreen = ({ match, history }) => {
 
   return (
     <>
+      <Meta title='Proshop'></Meta>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
         Go Back
       </Link>

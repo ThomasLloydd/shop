@@ -7,6 +7,7 @@ import Loader from "../Components/Loader";
 import { getUserDetails, updateUserProfile } from "../actions/userActions";
 import { listMyOrders } from "../actions/orderActions";
 import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
+import Meta from "../Components/Meta";
 
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState("");
@@ -59,6 +60,7 @@ const ProfileScreen = ({ location, history }) => {
 
   return (
     <Row>
+      <Meta title='Proshop | Profile'></Meta>
       <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}

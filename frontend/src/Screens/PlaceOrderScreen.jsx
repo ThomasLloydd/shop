@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Message from "../Components/Message";
 import CheckoutSteps from "../Components/CheckoutSteps";
 import { createOrder } from "../actions/orderActions";
+import Meta from "../Components/Meta";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ const PlaceOrderScreen = ({ history }) => {
 
   return (
     <>
+      <Meta title='Proshop'></Meta>
       <CheckoutSteps step1 step2 step3 step4 />
       <Row>
         <Col md={8}>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import { Link } from "react-router-dom";
+import Meta from "../Components/Meta";
 import {
   Row,
   Col,
@@ -38,6 +39,7 @@ const CartScreen = ({ match, location, history }) => {
 
   return (
     <div>
+      <Meta title='Proshop | Cart'></Meta>;
       <Row>
         <Col md={8}>
           <h1>Shopping Cart</h1>

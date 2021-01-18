@@ -9,6 +9,7 @@ import Loader from "../Components/Loader";
 import { getOrderDetails, payOrder, shipOrder } from "../actions/orderActions";
 import { ORDER_PAY_RESET, ORDER_SHIP_RESET } from "../constants/orderConstants";
 import { CART_RESET } from "../constants/cartConstants";
+import Meta from "../Components/Meta";
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -97,6 +98,7 @@ const OrderScreen = ({ match, history }) => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
+      <Meta title='Proshop'></Meta>
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>

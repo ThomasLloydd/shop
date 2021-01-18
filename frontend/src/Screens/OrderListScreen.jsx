@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { listOrders } from "../actions/orderActions";
+import Meta from "../Components/Meta";
 const ProductListScreen = ({ history }) => {
   const dispatch = useDispatch();
 
@@ -24,8 +25,9 @@ const ProductListScreen = ({ history }) => {
 
   return (
     <>
+      <Meta title='Proshop'></Meta>
       <Row className='align-items-center'>
-        <h1>ORders</h1>
+        <h1>Orders</h1>
       </Row>
 
       {loading ? (

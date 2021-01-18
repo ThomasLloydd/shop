@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { listUsers, deleteUser } from "../actions/userActions";
+import Meta from "../Components/Meta";
 
 const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const UserListScreen = ({ history }) => {
 
   return (
     <div>
+      <Meta title='Proshop'></Meta>
       <h1>Users</h1>
       {loading ? (
         <Loader />

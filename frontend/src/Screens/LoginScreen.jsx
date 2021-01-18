@@ -6,6 +6,7 @@ import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 import { login } from "../actions/userActions";
 import FormContainer from "../Components/FormContainer";
+import Meta from "../Components/Meta";
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
@@ -32,6 +33,7 @@ const LoginScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
+      <Meta title='Proshop | Login'></Meta>
       <h1>Sign In</h1>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader></Loader>}
