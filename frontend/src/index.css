@@ -29,9 +29,12 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 0 100px 100px 0;
+  margin-right: 2px;
 }
 
 .searchText {
+  height: 40px;
+  width: 150px;
   border-radius: 100px 0 0 100px;
 }
 
@@ -83,6 +86,11 @@ h2 {
   margin-right: -500px;
   transition: all 0.5s ease-in-out;
   z-index: 20;
+}
+
+.pagination {
+  width: auto;
+  margin: 0 auto;
 }
 
 .showBiscuit {

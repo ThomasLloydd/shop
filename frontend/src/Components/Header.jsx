@@ -33,7 +33,7 @@ const Header = ({ history }) => {
         sticky='top'
         expand='lg'
         collapseOnSelect
-        className='bg-dark'
+        className='bg-dark d-flex justify-content-between'
         variant='dark'
       >
         <LinkContainer to='/'>
@@ -41,7 +41,9 @@ const Header = ({ history }) => {
             <span className='orangeText'>Pro</span>Shop
           </Navbar.Brand>
         </LinkContainer>
-        <Route render={({ history }) => <SearchBox history={history} />} />
+        <div className='m-auto'>
+          <Route render={({ history }) => <SearchBox history={history} />} />
+        </div>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ml-auto'>

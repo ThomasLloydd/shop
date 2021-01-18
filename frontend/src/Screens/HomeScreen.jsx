@@ -43,14 +43,24 @@ const HomeScreen = ({ match }) => {
                 </Col>
               ))}
           </Row>
-          <div style={{ width: "100%", textAlign: "center" }}>
-            <Paginate
-              style={{ margin: "0 auto" }}
-              pages={pages}
-              page={page}
-              keyword={keyword ? keyword : ""}
-              isAdmin={false}
-            />
+
+          <div style={{ width: "100%", textAlign: "text-center" }}>
+            <div
+              style={{
+                height: "50px",
+                width: "70px",
+                margin: "0 auto",
+              }}
+            >
+              {" "}
+              <Paginate
+                style={{ margin: "0 auto" }}
+                pages={pages}
+                page={page}
+                keyword={keyword ? keyword : ""}
+                isAdmin={false}
+              />
+            </div>
           </div>
         </>
       )}

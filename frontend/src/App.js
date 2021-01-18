@@ -16,12 +16,14 @@ import UserEditScreen from "./Screens/UserEditScreen";
 import ProductListScreen from "./Screens/ProductListScreen";
 import ProductEditScreen from "./Screens/ProductEditScreen";
 import OrderListScreen from "./Screens/OrderListScreen";
+import Footer from "./Components/Footer";
+import { Container } from "react-bootstrap";
 
 const App = () => {
   return (
     <Router>
       <Header></Header>
-      <div className='mainContainer'>
+      <Container>
         <main>
           <Route path='/' component={HomeScreen} exact></Route>
           <Route path='/page/:pageNumber' component={HomeScreen} exact></Route>
@@ -58,7 +60,8 @@ const App = () => {
           ></Route>
           <Route path='/admin/orderslist' component={OrderListScreen}></Route>
         </main>
-      </div>
+      </Container>
+      <Footer></Footer>
     </Router>
   );
 };
